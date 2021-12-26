@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Online dating 2048: Move the bricks</title>
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="style/addtohomescreen.css">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Dating 2048">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <img src="meta/apple-touch-startup-image-640x920.png" width='640'>
+  </div>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title"><div style='position:relative;height:0;width: 0;'><div id='progress'></div></div><span id='title'>Love...</span></h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Move the bricks to find a significant other online. Just put yourself out there!</p>
+      <a class="restart-button">Delete the apps</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+    <strong class='important'>How to play the love game:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> However, your can always get ghosted. Getting ghosted twice makes your stronger and two ghosted bricks vanish when they touch. You will stop getting ghosted after becoming exclusive.<br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it. When the dompamine fades, it will become a <strong>Doubts</strong> brick (or you could even get ghosted), which downgrades bricks as your situationship spirals downwards.
+    </p>
+    <hr>
+    <div style="line-height:1.65">
+    Fork the PhD version of this game: <a href="https://github.com/ymfa/phd-2048" target="_blank">here</a> on GitHub!
+    </div>
+
+  </div>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+  <script src="js/addtohomescreen.min.js"></script>
+  <script>
+  addToHomescreen({
+    appID: 'io.github.ymfa.phd2048',
+    skipFirstVisit: true,
+    maxDisplayCount: 1
+  });
+  </script>
+</body>
+</html>
