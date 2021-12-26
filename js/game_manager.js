@@ -94,7 +94,10 @@ GameManager.prototype.addRandomTile = function () {
     var p = 0.003;
     if(this.maxTile >= 1024) p = 0.001;
     else if(this.maxTile >= 256) p = 0.002;
-    var value = coin < 0.9 ? 2 : 4;
+    var value = coin < 0.8 ? 2 : 4;
+    if (coin > 0.95){
+        value = 8; 
+    }
     if(this.karma == 0 && this.relTime == null && numCellsAvailable > 1 && numCellsAvailable < 10 && coin >= 0.9-9*p && coin < 0.9+p){
       value = 1;
       this.relTime = new Date().getTime();
@@ -218,9 +221,10 @@ GameManager.prototype.move = function (direction) {
         }
         else if (next && next.value === tile.value && !next.mergedFrom) {
           if(next.value != 0) {
-            if((self.maxTile < 256 || self.garbCount % 2 > 0)
-              && ((next.value == 8 && Math.random() >= 0.8)
-              || (next.value == 128 && Math.random() >= 0.85))) {
+            if((self.maxTile < 512 || self.garbCount % 2 > 0)
+              && ((next.value == 4 && Math.random() >= 0.7)
+             ||(next.value == 8 && Math.random() >= 0.8)
+              || (next.value == 128 && Math.random() >= 0.9))) {
               var merged = new Tile(positions.next, 0);
               self.garbCount++;
             }
@@ -376,13 +380,14 @@ GameManager.prototype.unsetTimer = function () {
     clearInterval(this.timer);
     delete this.timer;
   }
-  if(this.karma <= 0){
+  //removing doubts
+  //if(this.karma <= 0){
     var changes = this.grid.clearRelationship(true);
-    if(changes){
-      this.garbCount += changes;
-      this.actuate();
-    }
-  }
+//    if(changes){
+//      this.garbCount += changes;
+//      this.actuate();
+//    }
+  //}
   if (!this.movesAvailable()) {  // Determine game over when relationship ends
     this.over = true;
     this.actuate();

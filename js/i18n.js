@@ -6,7 +6,7 @@ function update_captions(){
        "Walk",
       "Coffee",
       "Dinner", 
-      "<span style='font-size:11px'>More dates</span>", 
+      "Movie", 
       "FWB",
       "<span style='font-size:11px'>Exclusivity</span>", 
         "<span style='font-size:11px'>Relationship</span>",
@@ -24,7 +24,7 @@ function update_captions(){
       "Walk",
       "Coffee",
       "Dinner",
-      "<span style='font-size:20px'>More dates</span>", 
+      "Movie", 
       "FWB",
       "<span style='font-size:20px'>Exclusivity</span>", 
      "<span style='font-size:18px'>Relationship</span>", 
@@ -72,7 +72,7 @@ function play_in_english(){
   if(titleElem.textContent != "Love") titleElem.textContent = game_title;
   document.querySelector('.restart-button').textContent = "Delete the Apps";
   document.querySelector('.retry-button').textContent = "Try again";
-  document.querySelector('.game-explanation').innerHTML = "<strong class='important'>How to play the love game:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> However, your can always get ghosted. Getting ghosted twice makes your stronger and two ghosted bricks vanish when they touch. You will stop getting ghosted after becoming exclusive.<br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it. When the dompamine fades, it will become a <strong>Doubts</strong> brick (or you could even get ghosted), which downgrades bricks as your situationship spirals downwards.";
+  document.querySelector('.game-explanation').innerHTML = "How to find someone online:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> However, you can always get ghosted. Getting ghosted twice will help you realize its not you so two ghosted bricks vanish when they touch. You will stop getting ghosted after achieving <strong>Exclusivity</strong>.<br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it.";
 
   if(span_en) span_en.parentNode.removeChild(span_en);
   create_switch_zh();
