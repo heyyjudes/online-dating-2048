@@ -150,14 +150,8 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (ended) {
   var type    = ended ? "game-won" : "game-over";
-  var message = window.game.won ? result_msg + "in LOVE and a Relationship!" : "You tried your best!";
-  if(!window.game.won) {
-    if(window.game.maxTile >= 1024) message = "A for effort!";
-    else if(window.game.maxTile >= 512) message = "Forever Alone!";
-  }
-  else if(window.game.maxTile > 2048) {
-    message = result_msg + val2caption(window.game.maxTile) + "!";
-  }
+  var message = window.game.won ? result_msg + "in a Relationship!" : "You tried your best!";
+  message = "Congrats! <br>" + val2caption(window.game.maxTile) + "!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].innerHTML = message;
