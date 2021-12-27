@@ -16,7 +16,7 @@ function update_captions(){
      "Marriage", 
     "<span style='font-size:smaller'>Happily Ever After</span>"];
     captions_rel = ["<span style='font-size:9px;'>Good Sex</span>",
-      "<span style='font-size:11px;'>Bad Sex</span>"];
+      "<span style='font-size:11px;'>Doubts</span>"];
   }
   else{
     captions = ["Match", "Chat",
