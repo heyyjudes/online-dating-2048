@@ -1,5 +1,5 @@
-PhD 2048: a sliding puzzle
-Copyright (C) 2017  Yimai Fang
+Online Dating 2048: a sliding puzzle
+Copyright (C) 2021  Judy Hanwen Shen
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

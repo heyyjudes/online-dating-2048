@@ -380,14 +380,7 @@ GameManager.prototype.unsetTimer = function () {
     clearInterval(this.timer);
     delete this.timer;
   }
-  //removing doubts
-  //if(this.karma <= 0){
     var changes = this.grid.clearRelationship(true);
-//    if(changes){
-//      this.garbCount += changes;
-//      this.actuate();
-//    }
-  //}
   if (!this.movesAvailable()) {  // Determine game over when relationship ends
     this.over = true;
     this.actuate();

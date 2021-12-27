@@ -72,7 +72,7 @@ function play_in_english(){
   if(titleElem.textContent != "Love") titleElem.textContent = game_title;
   document.querySelector('.restart-button').textContent = "Delete the Apps";
   document.querySelector('.retry-button').textContent = "Try again";
-  document.querySelector('.game-explanation').innerHTML = "How to find someone online:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> However, you can always get ghosted. Getting ghosted twice will help you realize its not you so two ghosted bricks vanish when they touch. You will stop getting ghosted after achieving <strong>Exclusivity</strong>.<br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it.";
+  document.querySelector('.game-explanation').innerHTML = "How to find love online:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> You win when you find <strong>Love</strong>!<br> However, you can always get ghosted. Getting ghosted twice will help you realize its not you so two ghosted bricks vanish when they touch. You will stop getting ghosted after achieving <strong>Exclusivity</strong>.<br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it.";
 
   if(span_en) span_en.parentNode.removeChild(span_en);
   create_switch_zh();
