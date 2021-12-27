@@ -17,6 +17,20 @@ function update_captions(){
     "<span style='font-size:smaller'>Happily Ever After</span>"];
     captions_rel = ["<span style='font-size:9px;'>Good Sex</span>",
       "<span style='font-size:11px;'>Doubts</span>"];
+    captions_raw = ["Match", "Chat",
+      "Video Date", 
+      "Walk",
+      "Coffee",
+      "Dinner",
+      "Movie", 
+      "FWB",
+      "Exclusivity", 
+     "Relationship", 
+     "Love",
+      "Partnership",
+      "Engagement", 
+    "Marriage", 
+    "Happily Ever After"]
   }
   else{
     captions = ["Match", "Chat",
@@ -33,6 +47,20 @@ function update_captions(){
       "<span style='font-size:smaller'>Engagement</span>", "Marriage", "Happily Ever After"];
     captions_rel = ["<span style='font-size:15px;'>Good Sex</span>",
       "<span style='font-size:20px;'>Doubts</span>"];
+    captions_raw = ["Match", "Chat",
+      "Video Date", 
+      "Walk",
+      "Coffee",
+      "Dinner",
+      "Movie", 
+      "FWB",
+      "Exclusivity", 
+     "Relationship", 
+     "Love",
+      "Partnership",
+      "Engagement", 
+    "Marriage", 
+    "Happily Ever After"];
   }
 }
 
@@ -72,7 +100,7 @@ function play_in_english(){
   if(titleElem.textContent != "Love") titleElem.textContent = game_title;
   document.querySelector('.restart-button').textContent = "Delete App";
   document.querySelector('.retry-button').textContent = "Try again";
-  document.querySelector('.game-explanation').innerHTML = "How to find love online:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br> You win when you find <strong>Love</strong>!<br> However, you can always get <strong>Ghosted</strong>. Getting <strong>Ghosted</strong> twice will help you realize its not you so two <strong>Ghosted</strong> bricks vanish when they touch. You will stop getting ghosted after achieving <strong>Exclusivity</strong>. The key to winning this game is to manage how you react to getting <strong>Ghosted</strong>. <br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it.";
+  document.querySelector('.game-explanation').innerHTML = "How to find love online:</strong> Use your <strong>arrow keys</strong> to move the bricks. When two bricks of the same type touch, they <strong>merge into one!</strong><br><br> You win when you find <strong>Love</strong>!<br> <br>However, you can always get <strong>Ghosted</strong>. Getting <strong>Ghosted</strong> twice will help you realize its not you so two <strong>Ghosted</strong> bricks vanish when they touch. You will stop getting ghosted after achieving <strong>Exclusivity</strong>. The key to winning this game is to manage how you react to getting <strong>Ghosted</strong>. <br><strong>Good sex</strong> upgrades any brick it touches for the first time. The brick shows the number of times you have benefited from it. <br> <br> Finding <strong>Love</strong> in this game is difficult because finding love in real life is difficult. Remember to always be kind to yourself and take breaks from online dating for self-care. Whichever stage you get to, you are a winner!";
 
   if(span_en) span_en.parentNode.removeChild(span_en);
   create_switch_zh();

@@ -70,6 +70,27 @@ var val2caption = function(val){
     return val;
 };
 
+var val2captionfinal = function(val){
+  if(val <= 0) return caption_garbage;
+  if(val == 1){
+    var caption = "<span style='display:inline-block;line-height:1.2;vertical-align:middle'><span class='rel'>";
+    if(window.game.relTime) caption += captions_rel[0];
+    else caption += captions_rel[1];
+    caption += "</span><br><span class='karma'>" + window.game.karma + "</span></span>";
+    return caption;
+  }
+  var idx = -1;
+  var n = 1;
+  while(n < val) {
+    n <<= 1;
+    idx++;
+  }
+  if(idx >= 0 && idx < captions.length)
+    return captions_raw[idx];
+  else
+    return val;
+};
+
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
@@ -151,7 +172,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 HTMLActuator.prototype.message = function (ended) {
   var type    = ended ? "game-won" : "game-over";
   var message = window.game.won ? result_msg + "in a Relationship!" : "You tried your best!";
-  message = "Congrats! <br>" + val2caption(window.game.maxTile) + "!";
+  message = "Congrats! <br>" + val2captionfinal(window.game.maxTile) + "!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].innerHTML = message;

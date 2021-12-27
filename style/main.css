@@ -338,26 +338,26 @@ hr {
       .tile.tile-1 .tile-inner {
         font-size: 14px; } }
   .tile.tile-2 .tile-inner {
-    background: #fff0f3;
+    background: #e9ecef;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     @media screen and (max-width: 520px) {
       .tile.tile-2 .tile-inner {
         font-size: 14px; } }
   .tile.tile-4 .tile-inner {
-    background: #ffccd5;
+    background: #fff0f3;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
     @media screen and (max-width: 520px) {
       .tile.tile-4 .tile-inner {
         font-size: 14px; } }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #ffb3c1; }
+    background: #ffccd5; }
     @media screen and (max-width: 520px) {
       .tile.tile-8 .tile-inner {
         font-size: 14px; } }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
-    background: #ff8fa3; }
+    background: #ffb3c1; }
     @media screen and (max-width: 520px) {
       .tile.tile-16 .tile-inner {
         font-size: 14px; } }

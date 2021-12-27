@@ -98,7 +98,7 @@ GameManager.prototype.addRandomTile = function () {
     if (coin > 0.95){
         value = 8; 
     }
-    if(this.karma == 0 && this.relTime == null && numCellsAvailable > 1 && numCellsAvailable < 10 && coin >= 0.9-9*p && coin < 0.9+p){
+    if(this.karma == 0 && this.relTime == null && numCellsAvailable > 1 && numCellsAvailable < 12 && coin >= 0.9-9*p && coin < 0.9+2*p){
       value = 1;
       this.relTime = new Date().getTime();
       this.setTimer();
@@ -204,7 +204,7 @@ GameManager.prototype.move = function (direction) {
             if (next.benefitedFrom != self.relTime) {
               next.value *= 2;
               if (next.value > self.maxTile) self.maxTile = next.value;
-              if (next.value >= 2048) self.won = true;
+              if (next.value >= 1024) self.won = true;
               next.benefitedFrom = self.relTime;
               self.karma++;
               moved = true;
@@ -380,7 +380,11 @@ GameManager.prototype.unsetTimer = function () {
     clearInterval(this.timer);
     delete this.timer;
   }
-    var changes = this.grid.clearRelationship(true);
+  var ghost = true; 
+  if(Math.random() > 0.30){
+      ghost = false;
+  }
+  var changes = this.grid.clearRelationship(false); 
   if (!this.movesAvailable()) {  // Determine game over when relationship ends
     this.over = true;
     this.actuate();
